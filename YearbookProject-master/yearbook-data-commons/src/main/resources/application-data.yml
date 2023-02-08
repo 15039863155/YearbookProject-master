@@ -1,0 +1,41 @@
+spring:
+  ########## 配置 JDBC 信息
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yearbook_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    ########## 配置数据库连接池使用 Druid
+    type: com.alibaba.druid.pool.DruidDataSource
+    ########## 配置 Druid 连接信息
+    druid:
+      min-idle: 3
+      max-active: 15
+      initial-size: 5
+      min-evictable-idle-time-millis: 30000
+      max-evictable-idle-time-millis: 60000
+      ###### 配置 Druid 数据监控信息
+      web-stat-filter:
+        ###### 开启数据监控功能
+        enabled: true
+        ###### 配置需要监控的 URL
+        url-pattern: /*
+        ###### 过滤掉不需要监控的 URL
+        exclusions: "*.jpg, *.gif, *.png, *.jpeg, *.ico, *.js, *.css, /druid/*"
+        ###### 是否监控 HttpSession
+        session-stat-enable: true
+      ###### 配置 Druid 数据监控平台网页信息
+      stat-view-servlet:
+        ###### 启用数据监控平台网页
+        enabled: true
+        ###### 配置监控平台网页登录地址
+        url-pattern: /druid/*
+        ###### 配置登录用户名和密码
+        login-username: druid
+        login-password: druid
+        ###### 开启重置按钮
+        reset-enable: true
+########## 配置 MyBatis Plus 信息
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.Mapper.xml
+  type-aliases-package: com.whackon.yearbook.*.pojo.entity

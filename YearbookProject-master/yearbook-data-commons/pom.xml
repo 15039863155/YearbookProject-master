@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                                http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>yearbook-data-commons</artifactId>
+	<!-- 配置项目打包方式：jar -->
+	<packaging>jar</packaging>
+
+	<!-- 配置项目父级依赖：Yearbook Parent [BEGIN] -->
+	<parent>
+		<groupId>com.whackon.yearbook</groupId>
+		<artifactId>yearbook-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<!-- 配置项目父级依赖：Yearbook Parent [END] -->
+
+	<dependencies>
+		<!-- 配置依赖：Yearbook Commons [BEGIN] -->
+		<dependency>
+			<groupId>com.whackon.yearbook</groupId>
+			<artifactId>yearbook-commons</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+		<!-- 配置依赖：Yearbook Commons [END] -->
+
+		<!-- 配置依赖：MySQL Connector/J [BEGIN] -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- 配置依赖：MySQL Connector/J [END] -->
+
+		<!-- 配置依赖：Druid Spring Boot Starter [BEGIN] -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid-spring-boot-starter.version}</version>
+		</dependency>
+		<!-- 配置依赖：Druid Spring Boot Starter [END] -->
+
+		<!-- 配置依赖：MyBatis Plus [BEGIN] -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatis-plus-boot-starter.version}</version>
+		</dependency>
+		<!-- 配置依赖：MyBatis Plus [END] -->
+
+		<!-- 配置依赖：PageHelper Spring Boot Starter [BEGIN] -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>${pagehelper-spring-boot-starter.version}</version>
+		</dependency>
+		<!-- 配置依赖：PageHelper Spring Boot Starter [END] -->
+	</dependencies>
+</project>

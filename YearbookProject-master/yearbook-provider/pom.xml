@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                                http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>yearbook-provider</artifactId>
+	<!-- 配置项目打包方式：jar -->
+	<packaging>jar</packaging>
+
+	<!-- 配置项目父级依赖：Yearbook Parent [BEGIN] -->
+	<parent>
+		<groupId>com.whackon.yearbook</groupId>
+		<artifactId>yearbook-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<!-- 配置项目父级依赖：Yearbook Parent [END] -->
+
+	<dependencies>
+		<!-- 配置依赖：Yearbook Data Commons [BEGIN] -->
+		<dependency>
+			<groupId>com.whackon.yearbook</groupId>
+			<artifactId>yearbook-data-commons</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+		<!-- 配置依赖：Yearbook Data Commons [END] -->
+	</dependencies>
+</project>

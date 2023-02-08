@@ -1,0 +1,10 @@
+spring:
+  ###### 开启 Spring Boot 对于 Bean ID 的 Override 机制
+  main:
+    allow-bean-definition-overriding: true
+  ###### 配置连接注册中心 Nacos 信息
+  cloud:
+    nacos:
+      discovery:
+        ###### Nacos 连接地址
+        server-addr: http://127.0.0.1:8848
